@@ -1,4 +1,10 @@
 terraform{
+    backend "s3" {
+    bucket = "3.devops.candidate.exam"
+    key    = "sumit.wani"
+    region = "eu-west-1"
+  }
+  
     data "aws_nat_gateway" "nat" {
   id = "nat-07863fc48f5b99110"
   connectivity_type = "private"
